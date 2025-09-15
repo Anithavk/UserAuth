@@ -1,0 +1,63 @@
+User-api
+1.RegisterUser
+
+Request Url: https://userauth-g6xm.onrender.com/api/auth/register
+Method:POST
+Request:
+{
+    "name": "padma",
+    "email": "padma@yopmail.com",
+    "password": "123456",
+    "gender": "female"
+}
+
+Response
+{
+    "data": {
+        "id": "68c853cd2028c468ff49d4ae",
+        "name": "padma",
+        "email": "padma@yopmail.com",
+        "gender": "female"
+    },
+    "status": "success",
+    "message": "User registered successfully"
+}
+
+2.LoginUser
+
+Request Url:https://userauth-g6xm.onrender.com/api/auth/login
+Method:POST
+Request:
+
+{
+    "email": "padma@yopmail.com",
+    "password": "123456"
+}
+
+Response:
+
+{
+    "data": {
+        "id": "68c853cd2028c468ff49d4ae",
+        "name": "padma",
+        "email": "padma@yopmail.com",
+        "gender": "female"
+    },
+    "status": "success",
+    "message": "User logged in successfully",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4Yzg1M2NkMjAyOGM0NjhmZjQ5ZDRhZSIsImlhdCI6MTc1Nzk1OTY0NSwiZXhwIjoxNzU3OTcwNDQ1fQ.JYWycICyHVAMgpDOYprHEU7j7g1NABq12vcQ9rnB__8"
+}
+
+3.UserProfile
+Request URL: https://userauth-g6xm.onrender.com/api/auth/profile
+Method:GET
+auterization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4Yzg1M2NkMjAyOGM0NjhmZjQ5ZDRhZSIsImlhdCI6MTc1Nzk1OTY0NSwiZXhwIjoxNzU3OTcwNDQ1fQ.JYWycICyHVAMgpDOYprHEU7j7g1NABq12vcQ9rnB__8
+
+Response:
+
+{
+    "id": "68c853cd2028c468ff49d4ae",
+    "name": "padma",
+    "email": "padma@yopmail.com",
+    "gender": "female"
+}
